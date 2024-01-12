@@ -1,7 +1,6 @@
 use crate::schema::quotes;
 use diesel::prelude::*;
 use rocket::serde::{Deserialize, Serialize};
-use std::cmp::{Ord, Eq, PartialOrd, PartialEq};
 
 #[derive(Debug, Queryable, Serialize, Deserialize)]
 pub struct Quote {

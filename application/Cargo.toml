@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 domain = { path = "../domain" }
+infrastructure = { path = "../infrastructure" }
 diesel = { version = "1.4", features = ["postgres"] }
 serde = { version = "1", features = ["derive"] }
 uuid = "0.8"
