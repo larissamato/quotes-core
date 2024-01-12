@@ -13,6 +13,5 @@ fn world() -> &'static str {
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-    .mount("/", routes![index])
-    .mount("/api", routes![world])
+    .mount("/", routes![index, world])
 }
