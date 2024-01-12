@@ -5,3 +5,4 @@ members = [
   "infrastructure",
   "application",
 ]
+resolver = "2"
