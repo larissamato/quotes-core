@@ -1,5 +1,5 @@
 [package]
-name = "quotes-core-infrastructure"
+name = "infrastructure"
 version = "0.1.0"
 edition = "2021"
 

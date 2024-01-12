@@ -1,4 +1,7 @@
-use serde::{Deserialize, Serialize};
+use crate::schema::quotes;
+use diesel::prelude::*;
+use rocket::serde::{Deserialize, Serialize};
+use std::cmp::{Ord, Eq, PartialOrd, PartialEq};
 
 #[derive(Debug, Queryable, Serialize, Deserialize)]
 pub struct Quote {
@@ -10,8 +13,9 @@ pub struct Quote {
     pub updated_at: Option<String>,
 }
 
-#[derive(Debug, Insertable, Serialize, Deserialize)]
-#[table_name = "quotes"]
+#[derive(Insertable, Deserialize)]
+#[serde(crate = "rocket::serde")]
+#[diesel(table_name = quotes)]
 pub struct NewQuote {
     pub uuid: String,
     pub quote: String,

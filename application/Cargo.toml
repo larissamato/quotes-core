@@ -1,13 +1,13 @@
 [package]
-name = "quotes-core-application"
+name = "application"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-quotes-core-lib = { path = "../domain" }
+domain = { path = "../domain" }
 diesel = { version = "1.4", features = ["postgres"] }
 serde = { version = "1", features = ["derive"] }
 uuid = "0.8"
 chrono = "0.4"
-r2d2 = "0.9"
+r2d2 = "0.8.10"
 dotenv = "0.15"
