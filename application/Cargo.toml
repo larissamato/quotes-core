@@ -1,20 +1,10 @@
-[workspace]
-members = [
-  "api",
-  "domain",
-  "infrastructure",
-  "application",
-  "shared",
-]
-
 [package]
-name = "quotes-core"
+name = "quotes-core-application"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rocket = "0.5.0"
-rocket_codegen = { version = "0.5.0", features = ["json"] }
+quotes-core-lib = { path = "../domain" }
 diesel = { version = "1.4", features = ["postgres"] }
 serde = { version = "1", features = ["derive"] }
 uuid = "0.8"
